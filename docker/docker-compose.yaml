@@ -114,6 +114,8 @@ services:
       SENTRY_TRACES_SAMPLE_RATE: 1.0
       # The sample rate for Sentry profiles. Default: `1.0`
       SENTRY_PROFILES_SAMPLE_RATE: 1.0
+       # open api
+      OPENAI_API_BASE: 'https://chatai-internal.videocc.net/v1'
     depends_on:
       - db
       - redis
@@ -167,6 +169,8 @@ services:
       MAIL_DEFAULT_SEND_FROM: 'YOUR EMAIL FROM (eg: no-reply <no-reply@dify.ai>)'
       # the api-key for resend (https://resend.com)
       RESEND_API_KEY: ''
+      # open api
+      OPENAI_API_BASE: 'https://chatai-internal.videocc.net/v1'
     depends_on:
       - db
       - redis
