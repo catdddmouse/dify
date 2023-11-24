@@ -10,7 +10,7 @@ services:
       # The log level for the application. Supported values are `DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`
       LOG_LEVEL: INFO
       # A secret key that is used for securely signing the session cookie and encrypting sensitive information on the database. You can generate a strong key using `openssl rand -base64 42`.
-      SECRET_KEY: sk-9f73s3ljTXVcMT3Blb3ljTqtsKiGHXVcMT3BlbkFJLK7U
+      SECRET_KEY: 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
       # The base URL of console application web frontend, refers to the Console base URL of WEB service if console domain is
       # different from api or web app domain.
       # example: http://cloud.dify.ai
@@ -113,6 +113,8 @@ services:
       SENTRY_TRACES_SAMPLE_RATE: 1.0
       # The sample rate for Sentry profiles. Default: `1.0`
       SENTRY_PROFILES_SAMPLE_RATE: 1.0
+      # open api
+      OPENAI_API_BASE: 'https://chatai-internal.videocc.net/v1'
     depends_on:
       - db
       - redis
@@ -136,7 +138,7 @@ services:
       LOG_LEVEL: INFO
       # A secret key that is used for securely signing the session cookie and encrypting sensitive information on the database. You can generate a strong key using `openssl rand -base64 42`.
       # same as the API service
-      SECRET_KEY: sk-9f73s3ljTXVcMT3Blb3ljTqtsKiGHXVcMT3BlbkFJLK7U
+      SECRET_KEY: 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
       # The configurations of postgres database connection.
       # It is consistent with the configuration in the 'db' service below.
       DB_USERNAME: postgres
